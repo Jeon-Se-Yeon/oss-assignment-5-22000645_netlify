@@ -15,16 +15,20 @@ function AddModal({ isOpen, onClose, onAdd }) {
         event.preventDefault();
 
         // 간단한 유효성 검사 (index.html의 postData 유효성 검사 반영)
-        if (!product.trim() || !price.trim() || !material.trim() || !count.trim()) {
+        if (!String(product).trim() ||
+            !String(price).trim() ||
+            !String(material).trim() ||
+            !String(count).trim()) {
+
             alert("Please fill in all fields.");
             return;
         }
-        
+
         const priceValue = Number(price);
         const countValue = Number(count);
         if (isNaN(priceValue) || isNaN(countValue)) {
-             alert("Price and Count must be valid numbers.");
-             return;
+            alert("Price and Count must be valid numbers.");
+            return;
         }
 
         const newProduct = { product, price: priceValue, material, count: countValue };
@@ -43,7 +47,7 @@ function AddModal({ isOpen, onClose, onAdd }) {
 
     return (
         <div className={modalClass} id="addModal" tabIndex="-1" aria-labelledby="addModalLabel" aria-hidden={!isOpen}
-             onClick={(e) => e.target.id === 'addModal' && onClose()}>
+            onClick={(e) => e.target.id === 'addModal' && onClose()}>
             <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
                 <div className="modal-content">
                     <div className="modal-header">
@@ -53,13 +57,13 @@ function AddModal({ isOpen, onClose, onAdd }) {
                     <form onSubmit={handleSubmit}>
                         <div className="modal-body">
                             {/* Controlled Input Fields */}
-                            <input type="text" className="modal-input" id="product" placeholder="Product Name" 
+                            <input type="text" className="modal-input" id="product" placeholder="Product Name"
                                 value={product} onChange={(e) => setProduct(e.target.value)} />
-                            <input type="text" className="modal-input" id="price" placeholder="Price (e.g., 19.99)" 
+                            <input type="text" className="modal-input" id="price" placeholder="Price (e.g., 19.99)"
                                 value={price} onChange={(e) => setPrice(e.target.value)} />
-                            <input type="text" className="modal-input" id="material" placeholder="Material" 
+                            <input type="text" className="modal-input" id="material" placeholder="Material"
                                 value={material} onChange={(e) => setMaterial(e.target.value)} />
-                            <input type="text" className="modal-input" id="count" placeholder="Count (Quantity)" 
+                            <input type="text" className="modal-input" id="count" placeholder="Count (Quantity)"
                                 value={count} onChange={(e) => setCount(e.target.value)} />
                         </div>
                         <div className="modal-footer">

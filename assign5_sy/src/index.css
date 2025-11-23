@@ -78,7 +78,7 @@ button {
 .content {
     /* Product info text */
     flex-grow: 1;
-    font-size: 16px;
+    font-size: 20px;
     color: #555;
     padding: 0;
 }
