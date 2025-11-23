@@ -21,29 +21,29 @@ button {
 }
 
 #btnStu {
-    background-color: #007bff; /* Primary blue */
+    background-color: #ff7f27; /* Primary blue */
     color: white;
 }
 
 #btnStu:hover {
-    background-color: #0056b3;
+    background-color: #c46222;
 }
 
 #btn-modal {
-    background-color: #28a745; /* Success green */
+    background-color: #4cd2e2; /* Success green */
     color: white;
     margin-left: 0; /* Align with fetch button */
 }
 
 #btn-modal:hover {
-    background-color: #1e7e34;
+    background-color: #379aa5;
 }
 
 /* Content Area */
 #contents {
     margin-top: 20px;
     padding: 20px;
-    background-color: white;
+    background-color: #ffe5d3;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -91,21 +91,21 @@ button {
 }
 
 .product-actions button:nth-of-type(1) { /* Modify button */
-    background-color: #ffc107; /* Yellow */
+    background-color: #e49dfd; /* Yellow */
     color: #333;
 }
 
 .product-actions button:nth-of-type(1):hover {
-    background-color: #e0a800;
+    background-color: #9c6cad;
 }
 
 .product-actions button:nth-of-type(2) { /* Delete button */
-    background-color: #dc3545; /* Red */
+    background-color: #ff3535; /* Red */
     color: white;
 }
 
 .product-actions button:nth-of-type(2):hover {
-    background-color: #bd2130;
+    background-color: #c12929;
 }
 
 
@@ -224,17 +224,21 @@ button {
 }
 
 #btn-Add { /* Add data Button */
-    background-color: #007bff; /* Primary blue */
+    background-color: #4cd2e2; /* Primary blue */
     color: white;
 }
 
+#btn-Add:hover { /* Add data Button */
+    background-color: #379aa5; /* Primary blue */
+}
+
 #btn-Save {
-     background-color: #28a745; /* Green for Save */
+     background-color: #4cd2e2; /* Green for Save */
      color: white;
 }
 
 #btn-Save:hover {
-    background-color: #1e7e34;
+    background-color: #379aa5;
 }
 
 /* Utility */
